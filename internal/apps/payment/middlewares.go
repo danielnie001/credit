@@ -46,8 +46,8 @@ type EPayRequest struct {
 	OrderName       string          `form:"name" binding:"required,max=64"`
 	MerchantOrderNo *string         `form:"out_trade_no" binding:"required,min=1,max=64"`
 	Amount          decimal.Decimal `form:"money" binding:"required"`
-	NotifyURL       string          `form:"notify_url" binding:"omitempty,max=512,url"`
-	ReturnURL       string          `form:"return_url" binding:"omitempty,max=512,url"`
+	NotifyURL       string          `form:"notify_url" binding:"omitempty,max=100,url"`
+	ReturnURL       string          `form:"return_url" binding:"omitempty,max=100,url"`
 	Device          string          `form:"device"`
 	Sign            string          `form:"sign" binding:"required"`
 	PayType         string          `form:"type" binding:"required"`
@@ -60,8 +60,8 @@ type LDCPayRequest struct {
 	OrderName       string          `form:"order_name" binding:"required,max=64"`
 	MerchantOrderNo *string         `form:"out_trade_no" binding:"required,min=1,max=64"`
 	Amount          decimal.Decimal `form:"money" binding:"required"`
-	NotifyURL       string          `form:"notify_url" binding:"omitempty,max=512,url"`
-	ReturnURL       string          `form:"return_url" binding:"omitempty,max=512,url"`
+	NotifyURL       string          `form:"notify_url" binding:"omitempty,max=100,url"`
+	ReturnURL       string          `form:"return_url" binding:"omitempty,max=100,url"`
 	PayType         string          `form:"type" binding:"required"`
 	Sign            string          `form:"sign" binding:"required"`
 }
